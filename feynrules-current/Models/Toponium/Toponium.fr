@@ -1,0 +1,340 @@
+(******************************)
+(***MJt/MEt: 341.537--->345.14 , WJt/WEt: 2.603--->2.605/2.615***)
+(* ************************** *)
+(* *****  Information   ***** *)
+(* ************************** *)
+M$ModelName = "Toponium";
+
+M$Information = {
+ Authors      -> {"Top 6"}, 
+ Institutions -> {"Top 6"},
+ Emails       -> {" "},
+ URLs         -> " ",  
+ References   -> {" "},
+ Version      -> "1.0",
+ Date         -> "2025.03.26"
+};
+
+(* ************************** *)
+(* *****  Change  log   ***** *)
+(* ************************** *)
+
+
+FeynmanGauge = False;
+
+
+(***** Setting for interaction order (as e.g. used by MadGraph 5)  ******)
+
+M$InteractionOrderLimit = {
+ {NP, 2}
+};
+
+M$InteractionOrderHierarchy = {
+ {QCD, 1}, {NP, 2}, {QED, 2}
+};
+
+
+(* ************************** *)
+(* *****     Fields     ***** *)
+(* ************************** *)
+M$ClassesDescription = {
+V[343] == {
+    ClassName        -> Jt,
+    SelfConjugate    -> True,
+    Mass             -> {MJt, 345.14},
+    Width            -> {WJt, 2.605},
+    ParticleName     -> "Jt",
+    PDG              -> 5000001, 
+    TeX              -> Subscript[J,t],
+    PropagatorLabel  -> "Jt",
+    PropagatorType   -> Sine,
+    PropagatorArrow  -> None,
+    FullName         -> "J_t"
+  },
+S[343] == {
+    ClassName        -> Et,
+    SelfConjugate    -> True,
+    Mass             -> {MEt, 345.14 },
+    Width            -> {WEt, 2.616},
+    ParticleName     -> "Et",
+    PDG              -> 5000002, 
+    TeX              -> Subscript[E,t],
+    PropagatorType   -> D,
+    PropagatorArrow  -> None,
+    PropagatorLabel  -> "Et",
+    FullName         -> "Eta_t"
+  }
+};
+
+
+(* ************************** *)
+(* *****     Gauge      ***** *)
+(* *****   Parameters   ***** *)
+(* *****   (FeynArts)   ***** *)
+(* ************************** *)
+
+GaugeXi[ V[343]  ] = 1;
+
+(* ************************** *)
+(* *****   Parameters   ***** *)
+(* ************************** *)  
+M$Parameters = {
+   	  
+gJt == { 
+      ParameterType -> External,
+      InteractionOrder -> {NP, 1},
+      BlockName -> JtINPUTS,
+      TeX -> Subscript[g,Jt],
+      Description -> "Toponium Jt wave function",
+      Value -> 0.0116462 (*Sqrt[0.301^3/(64*Pi)]  *)  },
+
+
+gVbJt== { 
+      ParameterType -> Internal,
+      BlockName -> JtINPUTS,
+      InteractionOrder -> {NP, 1},
+      TeX -> Subscript[g,VbJt],
+      Description -> "b-Jt vector coupling",
+      Value -> gJt*(-1/6*(ee^2*(MT^2*MW^2*(MT^2 + MW^2)*  (9 - 36*sw^2 + 32*sw^4) + cw^2*(4*MT^2 - MZ^2)*(3*MT^4 +  8*MW^4*sw^2 + 2*MT^2*MW^2*(3 + 4*sw^2))))/ (Sqrt[3]*cw^2*MW^2*(MT^2 + MW^2)*(2*MT - MZ)*(2*MT + MZ)*sw^2))   },  
+
+gAbJt == { 
+      ParameterType -> Internal,
+      BlockName -> JtINPUTS,
+      InteractionOrder -> {NP, 1},
+      TeX -> Subscript[g,AbJt],
+      Description -> "b-Jt axial-vector coupling",
+      Value -> gJt*((ee^2*MT^2*(cw^2*(MT^2 + 2*MW^2)*(4*MT^2 - MZ^2) - MW^2*(MT^2 + MW^2)* (-3 + 8*sw^2)))/(2*Sqrt[3]*cw^2*MW^2*  (MT^2 + MW^2)*(2*MT - MZ)*(2*MT + MZ)*sw^2))     },        
+   
+gVdsJt == { 
+      ParameterType -> Internal,
+      BlockName -> JtINPUTS,
+      InteractionOrder -> {NP, 1},
+      TeX -> Subscript[g,VdsJt],
+      Description -> "d/s-Jt vector coupling",
+      Value -> gJt*(-1/6*(ee^2*(-8*cw^2*MZ^2*sw^2 + MT^2*(9 + 4*(-9 + 8*cw^2)*sw^2 + 32*sw^4)))/(Sqrt[3]*cw^2*(4*MT^2 - MZ^2)*sw^2))   },  
+
+gAdsJt == { 
+      ParameterType -> Internal,
+      BlockName -> JtINPUTS,
+      InteractionOrder -> {NP, 1},
+      TeX -> Subscript[g,AdsJt],
+      Description -> "d/s-Jt axial-vector coupling",
+      Value -> gJt*(-1/2*(ee^2*MT^2*(-3 + 8*sw^2))/(Sqrt[3]*cw^2*(4*MT^2 - MZ^2)*sw^2))   },     
+
+gVucJt == { 
+      ParameterType -> Internal,
+      BlockName -> JtINPUTS,
+      InteractionOrder -> {NP, 1},
+      TeX -> Subscript[g,VucJt],
+      Description -> "u/c-Jt vector coupling",
+      Value -> gJt*((ee^2*(-16*cw^2*MZ^2*sw^2 + MT^2*(9 + 16*(-3 + 4*cw^2)*sw^2 + 64*sw^4)))/(6*Sqrt[3]*cw^2*(4*MT^2 - MZ^2)*sw^2))  },  
+
+gAucJt == { 
+      ParameterType -> Internal,
+      BlockName -> JtINPUTS,
+      InteractionOrder -> {NP, 1},
+      TeX -> Subscript[g,AucJt],
+      Description -> "u/c-Jt axial-vector coupling",
+      Value -> gJt*((ee^2*MT^2*(-3 + 8*sw^2))/(2*Sqrt[3]*cw^2*(4*MT^2 - MZ^2)*sw^2))    },     
+
+gVlepJt == { 
+      ParameterType -> Internal,
+      BlockName -> JtINPUTS,
+      InteractionOrder -> {NP, 1},
+      TeX -> Subscript[g,VlepJt],
+      Description -> "e-Jt vector coupling",
+      Value -> gJt*((ee^2*(8*cw^2*MZ^2*sw^2 - MT^2*(3 + 4*(-5 + 8*cw^2)*sw^2 + 32*sw^4)))/(2*Sqrt[3]*cw^2*(4*MT^2 - MZ^2)*sw^2))  }, 
+
+gAlepJt == { 
+      ParameterType -> Internal,
+      BlockName -> DJtINPUTS,
+      InteractionOrder -> {NP, 1},
+      TeX -> Subscript[g,AlepJt],
+      Description -> "e-Jt axial-vector coupling",
+      Value -> gJt*(-1/2*(ee^2*MT^2*(-3 + 8*sw^2))/(Sqrt[3]*cw^2*(4*MT^2 - MZ^2)*sw^2))    },
+
+gnu123== { 
+      ParameterType -> Internal,
+      BlockName -> DJtINPUTS,
+      InteractionOrder -> {NP, 1},
+      TeX -> Subscript[g,nuJt],      
+      Description -> "nu-Jt coupling",
+      Value -> gJt*(-1/2*(ee^2*MT^2*(-3 + 8*sw^2))/(Sqrt[3]*cw^2*(4*MT^2 - MZ^2)*sw^2))  },
+
+gJtHZ== { 
+      ParameterType -> Internal,
+      BlockName -> DJtINPUTS,
+      InteractionOrder -> {NP, 1},
+      TeX -> Subscript[g,JtHZ],      
+      Description -> "HZ-Jt coupling",
+      Value -> gJt*(-8*aEW*MT^2*Pi*(-3 + 8*sw^2))/(Sqrt[3]*MZ*(MH^2 - 4*MT^2 + MZ^2)*sw^2*(-1 + sw^2))     },
+
+gJtHA== { 
+      ParameterType -> Internal,
+      BlockName -> DJtINPUTS,
+      InteractionOrder -> {NP, 1},
+      TeX -> Subscript[g,JtHA],      
+      Description -> "HZ-Jt coupling",
+      Value -> gJt*(-64*aEW*MT^2*Pi)/((MH^2 - 4*MT^2)*MZ*sw*Sqrt[3 - 3*sw^2])     },
+
+gJtZZ== { 
+      ParameterType -> Internal,
+      BlockName -> DJtINPUTS,
+      InteractionOrder -> {NP, 1},
+      TeX -> Subscript[g,JtZZ],      
+      Description -> "ZZ-Jt coupling",
+      Value -> gJt*(2*aEW*MT^2*Pi*(-3 + 8*sw^2))/(Sqrt[3]*(2*MT^2 - MZ^2)*sw^2*(-1 + sw^2))    },
+
+gJtZA== { 
+      ParameterType -> Internal,
+      BlockName -> DJtINPUTS,
+      InteractionOrder -> {NP, 1},
+      TeX -> Subscript[g,JtZA],      
+      Description -> "ZA-Jt coupling",
+      Value -> gJt*(32*aEW*MT^2*Pi)/((4*MT^2 - MZ^2)*sw*Sqrt[3 - 3*sw^2])     },
+
+gJtWWepsEJk1E1E2== { 
+      ParameterType -> Internal,
+      BlockName -> DJtINPUTS,
+      InteractionOrder -> {NP, 1},
+      TeX -> Subscript[g,JtWWepsEJk1E1E2],      
+      Description -> "WW-Jt coupling, eps term",
+      Value -> gJt*(((-1)*Sqrt[3]*ee^2*MT^2)/((MT - MW)*(MT + MW)*sw^2))    },
+
+gJtWWEJE1k1E2== { 
+      ParameterType -> Internal,
+      BlockName -> DJtINPUTS,
+      InteractionOrder -> {NP, 1},
+      TeX -> Subscript[g,JtWWEJE1k1E2],      
+      Description -> "WW-Jt coupling, k1E2 term",
+      Value -> gJt*((ee^2*(-8*MW^2*MZ^2*sw^2 + MT^2*(12*MW^2 + MZ^2*(-3 + 8*sw^2))))/(Sqrt[3]*(MT - MW)*(MT + MW)*(2*MT - MZ)*(2*MT + MZ)*sw^2))   },
+
+gJtWWEJk1E1E2== { 
+      ParameterType -> Internal,
+      BlockName -> DJtINPUTS,
+      InteractionOrder -> {NP, 1},
+      TeX -> Subscript[g,JtWWEJk1E1E2],      
+      Description -> "WW-Jt coupling, EJk1 term",
+      Value -> gJt*((-2*ee^2*(6*MT^4 - 4*MW^2*MZ^2*sw^2 + MT^2*(6*MW^2 + MZ^2*(-3 + 4*sw^2))))/(Sqrt[3]*(MT - MW)*(MT + MW)*(2*MT - MZ)*(2*MT + MZ)*sw^2))   },
+
+
+gEt == { 
+      ParameterType -> External,
+      InteractionOrder -> {NP, 1},
+      BlockName -> EtINPUTS,
+      ComplexParameter -> False,
+      TeX -> Subscript[g,Et],
+      Description -> "Toponium Et wave function",
+      Value -> 0.0116462 (*Sqrt[0.301^3/(64*Pi)]  *) },
+
+gEtGG== { 
+      ParameterType -> Internal,
+      BlockName -> gEtGG,
+      InteractionOrder -> {NP, 1},
+      ComplexParameter -> False,
+      TeX -> Subscript[g,EtGG],      
+      Description -> "GG-Et coupling",
+      Value -> gEt*(2*aS*Pi)/(Sqrt[3]*MT)     },
+
+gEtHZ== { 
+      ParameterType -> Internal,
+      BlockName -> gEtHZ,
+      InteractionOrder -> {NP, 1},
+      ComplexParameter -> False,
+      TeX -> Subscript[g,EtHZ],      
+      Description -> "HZ-Et coupling",
+      Value -> gEt*(-4*aEW*MT*Pi*Sqrt[3 - 3*sw^2])/(MW^3*sw^2)     },
+
+gEtWW== { 
+      ParameterType -> Internal,
+      BlockName -> gEtWW,
+      InteractionOrder -> {NP, 1},
+      ComplexParameter -> False,
+      TeX -> Subscript[g,EtWW],      
+      Description -> "WWbar-Et coupling",
+      Value -> gEt*(2*Sqrt[3]*aEW*MT*Pi)/((MT^2 - MW^2)*sw^2)   },
+
+gEtZZ== { 
+      ParameterType -> Internal,
+      BlockName -> gEtZZ,
+      InteractionOrder -> {NP, 1},
+      ComplexParameter -> False,
+      TeX -> Subscript[g,EtZZ],      
+      Description -> "ZZ-Et coupling",
+      Value -> gEt*(-1/3*(aEW*MT*Pi*(9 - 24*sw^2 + 32*sw^4))/(Sqrt[3]*sw^2*(MW^2 + 2*MT^2*(-1 + sw^2)))) },
+
+gEtZA== { 
+      ParameterType -> Internal,
+      BlockName -> gEtZA,
+      InteractionOrder -> {NP, 1},
+      ComplexParameter -> False,
+      TeX -> Subscript[g,EtZA],      
+      Description -> "ZA-Et coupling",
+      Value -> gEt*(16*aEW*MT*Pi*Sqrt[1 - sw^2]*(-3 + 8*sw^2))/(3*Sqrt[3]*sw*(MW^2 + 4*MT^2*(-1 + sw^2))) },
+
+gEtAA== { 
+      ParameterType -> Internal,
+      BlockName -> gEtAA,
+      InteractionOrder -> {NP, 1},
+      ComplexParameter -> False,
+      TeX -> Subscript[g,EtAA],      
+      Description -> "AA-Et coupling",
+      Value -> gEt*(16*aEW*Pi)/(3*Sqrt[3]*MT) }
+
+};
+
+
+
+(* ************************** *)
+(* *****   Lagrangian   ***** *)
+(* ************************** *)
+
+L1JtX := ExpandIndices[-1/4 FS[Jt,mu,nu] FS[Jt,mu,nu] + 1/2 MJt^2 Jt[mu] Jt[mu]];
+
+      
+L1Jtqqbar := (
+bbar.Ga[mu].(gVbJt + gAbJt Ga[5]).b Jt[mu] + 
+dbar.Ga[mu].(gVdsJt + gAdsJt Ga[5]).d Jt[mu]+ 
+sbar.Ga[mu].(gVdsJt + gAdsJt Ga[5]).s Jt[mu]+ 
+ubar.Ga[mu].(gVucJt + gAucJt Ga[5]).u Jt[mu]+ 
+cbar.Ga[mu].(gVucJt + gAucJt Ga[5]).c Jt[mu]);
+
+L1JtLep := (
+ebar.Ga[mu].(gVlepJt+ gAlepJt Ga[5]).e  Jt[mu] + 
+mubar.Ga[mu].(gVlepJt+ gAlepJt Ga[5]).mu Jt[mu] + 
+tabar.Ga[mu].(gVlepJt+ gAlepJt Ga[5]).ta Jt[mu]+ 
+vebar.Ga[mu].(gnu123- gnu123 Ga[5]).ve Jt[mu] +
+vmbar.Ga[mu].(gnu123- gnu123 Ga[5]).vm Jt[mu] +
+vtbar.Ga[mu].(gnu123- gnu123 Ga[5]).vt Jt[mu]);
+
+L1JtHZ:= gJtHZ * ((MH^2*MZ^2)/(4*MT^2 - MZ^2) * Z[mu] * H + FS[Z,mu,nu] * del[H,nu]) * Jt[mu];
+
+L1JtHA:= gJtHA * (FS[A,mu,nu] * del[H,nu]) * Jt[mu];
+
+L1JtZZ:= gJtZZ * Eps[mu,nu,ro,sig] * FS[Z,mu,nu] * Z[ro] * Jt[sig];
+
+L1JtZA:= gJtZA * Eps[mu,nu,ro,sig] * FS[A,mu,nu] * Z[ro] * Jt[sig];
+
+L1JtWW:= (gJtWWepsEJk1E1E2*I*(-1)*Eps[mu,nu,ro,sig]*(Jt[mu] *(I)*del[Wbar[ro],nu]* W[sig]- Jt[mu] *Wbar[ro]* (I)*del[W[sig],nu])  + gJtWWEJE1k1E2*(Jt[mu] *(I)*del[Wbar[mu],sig]*W[sig] - Jt[mu] *(I)*del[W[mu],sig]*Wbar[sig])  +1/2*gJtWWEJk1E1E2* (Jt[mu] *(I)*del[Wbar[sig],mu]*W[sig] + HC[Jt[mu] *(I)*del[Wbar[sig],mu]*W[sig]])) ;
+
+L1JtSMEW := L1JtHZ + L1JtHA + L1JtZZ + L1JtZA + L1JtWW;
+
+L1Jt := L1JtX + L1Jtqqbar + L1JtLep + L1JtSMEW;
+
+
+L1EtX := 1/2 del[Et,mu] * del[Et,mu] - MEt^2/2 Et^2;
+
+L1EtGG := gEtGG * (Et* FS[G,mu,nu,a] * Dual[FS][G,mu,nu,a]);
+
+L1EtHZ := gEtHZ * FS[Z,mu,nu] * del[H,mu] * del[Et,nu];
+
+L1EtWW := gEtWW * (Et* FS[W,mu,nu] * Dual[FS][Wbar,mu,nu]);
+
+L1EtZZ := gEtZZ * (Et* FS[Z,mu,nu] * Dual[FS][Z,mu,nu]);
+
+L1EtAA := gEtAA * (Et* FS[A,mu,nu] * Dual[FS][A,mu,nu]);
+
+L1EtZA := gEtZA * (Et* FS[Z,mu,nu] * Dual[FS][A,mu,nu]);
+
+
+L1Et := L1EtX + L1EtHZ + L1EtGG + L1EtWW + L1EtZZ + L1EtAA + L1EtZA;
