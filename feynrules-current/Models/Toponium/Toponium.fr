@@ -12,7 +12,7 @@ M$Information = {
  URLs         -> " ",  
  References   -> {" "},
  Version      -> "1.0",
- Date         -> "2025.03.26"
+ Date         -> "2025.04.07"
 };
 
 (* ************************** *)
@@ -300,7 +300,7 @@ ubar.Ga[mu].(gVucJt + gAucJt Ga[5]).u Jt[mu]+
 cbar.Ga[mu].(gVucJt + gAucJt Ga[5]).c Jt[mu]);
 
 L1JtLep := (
-ebar.Ga[mu].(gVlepJt+ gAlepJt Ga[5]).e  Jt[mu] + 
+ebar.Ga[mu].(gVlepJt+ gAlepJt Ga[5]).e Jt[mu] + 
 mubar.Ga[mu].(gVlepJt+ gAlepJt Ga[5]).mu Jt[mu] + 
 tabar.Ga[mu].(gVlepJt+ gAlepJt Ga[5]).ta Jt[mu]+ 
 vebar.Ga[mu].(gnu123- gnu123 Ga[5]).ve Jt[mu] +
