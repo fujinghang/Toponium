@@ -1,0 +1,26 @@
+import model Toponium_LO_UFO/
+generate p p > jt j
+output PROC_pp_jt+jet
+launch
+0
+set ebeam1 6500
+set ebeam2 6500
+set pdlabel lhapdf
+set lhaid 331900
+set ptj 150
+0
+launch
+0
+set ebeam1 7000
+set ebeam2 7000
+0
+launch
+0
+set ebeam1 25000
+set ebeam2 25000
+0
+launch
+0
+set ebeam1 50000
+set ebeam2 50000
+0

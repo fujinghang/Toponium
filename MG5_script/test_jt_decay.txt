@@ -1,0 +1,6 @@
+import model Toponium_LO_UFO/
+generate jt > all all
+output PROC_jt_decay
+launch
+0
+0

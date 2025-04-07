@@ -1,0 +1,6 @@
+import model Toponium_LO_UFO/
+generate et > all all
+output PROC_et_decay
+launch
+0
+0

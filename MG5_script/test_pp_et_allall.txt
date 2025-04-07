@@ -1,0 +1,10 @@
+import model Toponium_LO_UFO/
+generate p p > et > all all
+output PROC_pp_et_allall
+launch
+0
+set ebeam1 6500
+set ebeam2 6500
+set pdlabel lhapdf
+set lhaid 331900
+0
