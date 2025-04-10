@@ -3,4 +3,9 @@ generate jt > all all
 output PROC_jt_decay
 launch
 0
+set fixed_ren_scale True
+set fixed_fac_scale True
+set scale 341.066
+set dsqrt_q2fact1 341.066
+set dsqrt_q2fact2 341.066
 0

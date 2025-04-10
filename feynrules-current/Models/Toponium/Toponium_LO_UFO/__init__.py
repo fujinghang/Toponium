@@ -45,6 +45,6 @@ else:
 gauge = [0]
 
 
-__author__ = "Top 6"
-__date__ = "2025.03.26"
+__author__ = "Jing-Hang Fu"
+__date__ = "2025.04.10"
 __version__= "1.0"

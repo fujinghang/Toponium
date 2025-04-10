@@ -1,0 +1,8 @@
+import model Toponium_LO_UFO/
+generate e+ e- > jt > b b~
+output PROC_ee_jt_bb
+launch
+0
+set ebeam1 172.57
+set ebeam2 172.57
+0

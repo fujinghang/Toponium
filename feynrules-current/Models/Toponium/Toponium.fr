@@ -1,18 +1,18 @@
 (******************************)
-(***MJt/MEt: 341.537--->345.14 , WJt/WEt: 2.603--->2.605/2.615***)
+(***MJt/MEt: 341.537--->345.14 , WJt/WEt: 2.603--->2.605/2.615 , lambda: 0.285--->0.301--->0.3073***)
 (* ************************** *)
 (* *****  Information   ***** *)
 (* ************************** *)
 M$ModelName = "Toponium";
 
 M$Information = {
- Authors      -> {"Top 6"}, 
- Institutions -> {"Top 6"},
- Emails       -> {" "},
- URLs         -> " ",  
+ Authors      -> {"Jing-Hang Fu"}, 
+ Institutions -> {"BUAA"},
+ Emails       -> {"myfujinghang@gmail.com"},
+ URLs         -> "https://github.com/fujinghang/Toponium",  
  References   -> {" "},
  Version      -> "1.0",
- Date         -> "2025.04.07"
+ Date         -> "2025.04.10"
 };
 
 (* ************************** *)
@@ -86,7 +86,16 @@ gJt == {
       BlockName -> JtINPUTS,
       TeX -> Subscript[g,Jt],
       Description -> "Toponium Jt wave function",
-      Value -> 0.0116462 (*Sqrt[0.301^3/(64*Pi)]  *)  },
+      Value -> 0.0120138 (*Sqrt[0.3073^3/(64*Pi)]  *)  },
+
+gEt == { 
+      ParameterType -> External,
+      InteractionOrder -> {NP, 1},
+      BlockName -> EtINPUTS,
+      ComplexParameter -> False,
+      TeX -> Subscript[g,Et],
+      Description -> "Toponium Et wave function",
+      Value -> 0.0120138 (*Sqrt[0.3073^3/(64*Pi)]  *) },
 
 
 gVbJt== { 
@@ -218,14 +227,6 @@ gJtWWEJk1E1E2== {
       Value -> gJt*((-2*ee^2*(6*MT^4 - 4*MW^2*MZ^2*sw^2 + MT^2*(6*MW^2 + MZ^2*(-3 + 4*sw^2))))/(Sqrt[3]*(MT - MW)*(MT + MW)*(2*MT - MZ)*(2*MT + MZ)*sw^2))   },
 
 
-gEt == { 
-      ParameterType -> External,
-      InteractionOrder -> {NP, 1},
-      BlockName -> EtINPUTS,
-      ComplexParameter -> False,
-      TeX -> Subscript[g,Et],
-      Description -> "Toponium Et wave function",
-      Value -> 0.0116462 (*Sqrt[0.301^3/(64*Pi)]  *) },
 
 gEtGG== { 
       ParameterType -> Internal,
@@ -300,7 +301,7 @@ ubar.Ga[mu].(gVucJt + gAucJt Ga[5]).u Jt[mu]+
 cbar.Ga[mu].(gVucJt + gAucJt Ga[5]).c Jt[mu]);
 
 L1JtLep := (
-ebar.Ga[mu].(gVlepJt+ gAlepJt Ga[5]).e Jt[mu] + 
+ebar.Ga[mu].(gVlepJt+ gAlepJt Ga[5]).e  Jt[mu] + 
 mubar.Ga[mu].(gVlepJt+ gAlepJt Ga[5]).mu Jt[mu] + 
 tabar.Ga[mu].(gVlepJt+ gAlepJt Ga[5]).ta Jt[mu]+ 
 vebar.Ga[mu].(gnu123- gnu123 Ga[5]).ve Jt[mu] +
