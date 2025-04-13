@@ -3,6 +3,6 @@ generate e+ e- > jt > w+ w-
 output PROC_ee_jt_ww
 launch
 0
-set ebeam1 172.57
-set ebeam2 172.57
+set ebeam1 170.5105
+set ebeam2 170.5105
 0

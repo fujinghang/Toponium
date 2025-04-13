@@ -1,6 +1,6 @@
 # This file was automatically created by FeynRules 2.3.49
 # Mathematica version: 14.0.0 for Microsoft Windows (64-bit) (December 13, 2023)
-# Date: Thu 10 Apr 2025 22:52:15
+# Date: Sun 13 Apr 2025 18:19:25
 
 
 
@@ -20,7 +20,7 @@ ZERO = Parameter(name = 'ZERO',
 gEt = Parameter(name = 'gEt',
                 nature = 'external',
                 type = 'real',
-                value = 0.0120138,
+                value = 0.0121136,
                 texname = 'g_{\\text{Et}}',
                 lhablock = 'EtINPUTS',
                 lhacode = [ 1 ])
@@ -28,7 +28,7 @@ gEt = Parameter(name = 'gEt',
 gJt = Parameter(name = 'gJt',
                 nature = 'external',
                 type = 'real',
-                value = 0.0120138,
+                value = 0.0121136,
                 texname = 'g_{\\text{Jt}}',
                 lhablock = 'JtINPUTS',
                 lhacode = [ 1 ])
@@ -217,21 +217,21 @@ MH = Parameter(name = 'MH',
                lhablock = 'MASS',
                lhacode = [ 25 ])
 
-MJt = Parameter(name = 'MJt',
-                nature = 'external',
-                type = 'real',
-                value = 345.14,
-                texname = '\\text{MJt}',
-                lhablock = 'MASS',
-                lhacode = [ 5000001 ])
-
 MEt = Parameter(name = 'MEt',
                 nature = 'external',
                 type = 'real',
-                value = 345.14,
+                value = 341.021,
                 texname = '\\text{MEt}',
                 lhablock = 'MASS',
                 lhacode = [ 5000002 ])
+
+MJt = Parameter(name = 'MJt',
+                nature = 'external',
+                type = 'real',
+                value = 341.021,
+                texname = '\\text{MJt}',
+                lhablock = 'MASS',
+                lhacode = [ 5000001 ])
 
 WZ = Parameter(name = 'WZ',
                nature = 'external',
@@ -265,21 +265,21 @@ WH = Parameter(name = 'WH',
                lhablock = 'DECAY',
                lhacode = [ 25 ])
 
-WJt = Parameter(name = 'WJt',
-                nature = 'external',
-                type = 'real',
-                value = 2.605,
-                texname = '\\text{WJt}',
-                lhablock = 'DECAY',
-                lhacode = [ 5000001 ])
-
 WEt = Parameter(name = 'WEt',
                 nature = 'external',
                 type = 'real',
-                value = 2.616,
+                value = 2.615,
                 texname = '\\text{WEt}',
                 lhablock = 'DECAY',
                 lhacode = [ 5000002 ])
+
+WJt = Parameter(name = 'WJt',
+                nature = 'external',
+                type = 'real',
+                value = 2.604,
+                texname = '\\text{WJt}',
+                lhablock = 'DECAY',
+                lhacode = [ 5000001 ])
 
 aEW = Parameter(name = 'aEW',
                 nature = 'internal',

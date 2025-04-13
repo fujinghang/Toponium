@@ -8,16 +8,21 @@ set ebeam2 6500
 set pdlabel lhapdf
 set lhaid 331900
 set ptj 150
-set fixed_ren_scale True
-set fixed_fac_scale True
-set scale 341.066
-set dsqrt_q2fact1 341.066
-set dsqrt_q2fact2 341.066
+0
+launch
+0
+set ebeam1 6800
+set ebeam2 6800
 0
 launch
 0
 set ebeam1 7000
 set ebeam2 7000
+0
+launch
+0
+set ebeam1 13500
+set ebeam2 13500
 0
 launch
 0

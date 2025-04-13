@@ -13,9 +13,9 @@ FR$ModelInformation={
   URLs -> "https://github.com/fujinghang/Toponium",
   References -> {" "},
   Version -> "1.0",
-  Date -> "2025.04.10"};
+  Date -> "2025.04.13"};
 
-FR$ClassesTranslation={A -> V[1], Z -> V[2], W -> V[3], G -> V[4], ghA -> U[1], ghZ -> U[2], ghWp -> U[3], ghWm -> U[4], ghG -> U[5], ve -> F[1], vm -> F[2], vt -> F[3], e -> F[4], mu -> F[5], ta -> F[6], u -> F[7], c -> F[8], t -> F[9], d -> F[10], s -> F[11], b -> F[12], H -> S[1], G0 -> S[2], GP -> S[3], Jt -> V[5], Et -> S[4]};
+FR$ClassesTranslation={A -> V[1], Z -> V[2], W -> V[3], G -> V[4], ghA -> U[1], ghZ -> U[2], ghWp -> U[3], ghWm -> U[4], ghG -> U[5], ve -> F[1], vm -> F[2], vt -> F[3], e -> F[4], mu -> F[5], ta -> F[6], u -> F[7], c -> F[8], t -> F[9], d -> F[10], s -> F[11], b -> F[12], H -> S[1], G0 -> S[2], GP -> S[3], Et -> S[4], Jt -> V[5]};
 
 FR$InteractionOrderPerturbativeExpansion={{NP, 0}, {QCD, 0}, {QED, 0}};
 
@@ -247,21 +247,21 @@ S[3] == {
     Indices -> {},
     PropagatorLabel -> "GP" },
 
-V[5] == {
-    SelfConjugate -> True,
-    PropagatorType -> Sine,
-    PropagatorArrow -> None,
-    Mass -> MJt,
-    Indices -> {},
-    PropagatorLabel -> "Jt" },
-
 S[4] == {
     SelfConjugate -> True,
     PropagatorType -> ScalarDash,
     PropagatorArrow -> None,
     Mass -> MEt,
     Indices -> {},
-    PropagatorLabel -> "Et" }
+    PropagatorLabel -> "Et" },
+
+V[5] == {
+    SelfConjugate -> True,
+    PropagatorType -> Sine,
+    PropagatorArrow -> None,
+    Mass -> MJt,
+    Indices -> {},
+    PropagatorLabel -> "Jt" }
 }
 
 
@@ -279,8 +279,8 @@ GaugeXi[ U[5] ] = GaugeXi[G];
 GaugeXi[ S[1] ] = 1;
 GaugeXi[ S[2] ] = GaugeXi[Z];
 GaugeXi[ S[3] ] = GaugeXi[W];
+GaugeXi[ S[4] ] = 1;
 GaugeXi[ V[5] ] = 1;
-GaugeXi[ S[4] ] = GaugeXi[S[343]];
 
 MZ[ ___ ] := MZ;
 MW[ ___ ] := MW;
@@ -294,8 +294,8 @@ MD[ ___ ] := MD;
 MS[ ___ ] := MS;
 MB[ ___ ] := MB;
 MH[ ___ ] := MH;
-MJt[ ___ ] := MJt;
 MEt[ ___ ] := MEt;
+MJt[ ___ ] := MJt;
 
 
 TheLabel[ V[4, {__}] ] := TheLabel[V[4]];

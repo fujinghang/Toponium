@@ -3,9 +3,10 @@ generate et > all all
 output PROC_et_decay
 launch
 0
-set fixed_ren_scale True
-set fixed_fac_scale True
-set scale 341.066
-set dsqrt_q2fact1 341.066
-set dsqrt_q2fact2 341.066
+0
+launch
+0
+set pdlabel lhapdf
+set lhaid 331900
+set as 0.118
 0

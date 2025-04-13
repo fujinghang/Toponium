@@ -1,6 +1,6 @@
 # This file was automatically created by FeynRules 2.3.49
 # Mathematica version: 14.0.0 for Microsoft Windows (64-bit) (December 13, 2023)
-# Date: Thu 10 Apr 2025 22:52:15
+# Date: Sun 13 Apr 2025 18:19:25
 
 
 from __future__ import division
@@ -385,20 +385,6 @@ G__plus__ = Particle(pdg_code = 251,
 
 G__minus__ = G__plus__.anti()
 
-Jt = Particle(pdg_code = 5000001,
-              name = 'Jt',
-              antiname = 'Jt',
-              spin = 3,
-              color = 1,
-              mass = Param.MJt,
-              width = Param.WJt,
-              texname = 'Jt',
-              antitexname = 'Jt',
-              charge = 0,
-              GhostNumber = 0,
-              LeptonNumber = 0,
-              Y = 0)
-
 Et = Particle(pdg_code = 5000002,
               name = 'Et',
               antiname = 'Et',
@@ -408,6 +394,20 @@ Et = Particle(pdg_code = 5000002,
               width = Param.WEt,
               texname = 'Et',
               antitexname = 'Et',
+              charge = 0,
+              GhostNumber = 0,
+              LeptonNumber = 0,
+              Y = 0)
+
+Jt = Particle(pdg_code = 5000001,
+              name = 'Jt',
+              antiname = 'Jt',
+              spin = 3,
+              color = 1,
+              mass = Param.MJt,
+              width = Param.WJt,
+              texname = 'Jt',
+              antitexname = 'Jt',
               charge = 0,
               GhostNumber = 0,
               LeptonNumber = 0,
