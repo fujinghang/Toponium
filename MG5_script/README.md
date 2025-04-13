@@ -13,6 +13,5 @@ Copy all provided `.txt` and `.sh` files to your MadGraph5 installation root dir
 ### 2. Execute Script
 Run this command in the terminal:
 ```bash
-chmod +x test_all_launch.sh
-./test_all_launch.txt
+./test_all_launch.sh
 ```

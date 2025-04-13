@@ -1,6 +1,6 @@
 # This file was automatically created by FeynRules 2.3.49
 # Mathematica version: 14.0.0 for Microsoft Windows (64-bit) (December 13, 2023)
-# Date: Sun 13 Apr 2025 18:19:05
+# Date: Mon 14 Apr 2025 02:10:16
 
 
 # 
@@ -41,7 +41,7 @@
    * Calling FeynmanRules for 1 Lagrangians.
    * Number of classes vertices: 54
    * Number of flavored vertices: 86
-   * Saved vertices in InterfaceRun[ 2 ].
+   * Saved vertices in InterfaceRun[ 1 ].
    * Checked QNumber conservation.
       - Quantum number GhostNumber conserved in all vertices.
       - Quantum number LeptonNumber conserved in all vertices.

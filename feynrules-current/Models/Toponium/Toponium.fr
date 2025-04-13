@@ -337,7 +337,9 @@ L1JtZZ:= gJtZZ * Eps[mu,nu,ro,sig] * FS[Z,mu,nu] * Z[ro] * Jt[sig];
 
 L1JtZA:= gJtZA * Eps[mu,nu,ro,sig] * FS[A,mu,nu] * Z[ro] * Jt[sig];
 
-L1JtWW:= (gJtWWepsEJk1E1E2*I*(-1)*Eps[mu,nu,ro,sig]*(Jt[mu] *(I)*del[Wbar[ro],nu]* W[sig]- Jt[mu] *Wbar[ro]* (I)*del[W[sig],nu])  + gJtWWEJE1k1E2*(Jt[mu] *(I)*del[Wbar[mu],sig]*W[sig] - Jt[mu] *(I)*del[W[mu],sig]*Wbar[sig])  +1/2*gJtWWEJk1E1E2* (Jt[mu] *(I)*del[Wbar[sig],mu]*W[sig] + HC[Jt[mu] *(I)*del[Wbar[sig],mu]*W[sig]])) ;
+L1JtWW:= (gJtWWepsEJk1E1E2*I*(-1)*Eps[mu,nu,ro,sig]*(Jt[mu] *(I)*del[Wbar[ro],nu]* W[sig]- Jt[mu] *Wbar[ro]* (I)*del[W[sig],nu])  +
+             gJtWWEJE1k1E2*(Jt[mu] *(I)*del[Wbar[mu],sig]*W[sig] - Jt[mu] *(I)*del[W[mu],sig]*Wbar[sig])  +
+             1/2*gJtWWEJk1E1E2* (Jt[mu] *(I)*del[Wbar[sig],mu]*W[sig] + HC[Jt[mu] *(I)*del[Wbar[sig],mu]*W[sig]])) ;
 
 L1JtSMEW := L1JtHZ + L1JtHA + L1JtZZ + L1JtZA + L1JtWW;
 
